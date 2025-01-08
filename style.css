@@ -123,11 +123,45 @@ display: flex;
 /* nav end */
 /*landing start*/
 .landing{
-    background-image: url('https://st4.depositphotos.com/1474768/38408/i/450/depositphotos_384080132-stock-photo-long-eared-owl-sitting-tree.jpg');
-      background-size: cover;
-      background-position: center;
-    min-height: 100vh;
-    position: relative;
+min-height: 100vh;
+position: relative;
+
+}
+
+
+.landing .bcg1{
+background-image: url('https://img.freepik.com/photos-gratuite/vue-realiste-du-hibou-pendant-journee_23-2151357453.jpg?t=st=1736341103~exp=1736344703~hmac=6a2ebe4cf1254a597707a0917f57dd1dd37c2025c649458201dd92ebde048c25&w=1380');
+background-size: cover;
+background-position: center;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+}
+.landing .bcg2 {
+  background-image: url('https://img.freepik.com/photos-gratuite/vue-hibou-dans-environnement-froid-esthetique-reve_23-2151367586.jpg?t=st=1736340835~exp=1736344435~hmac=2d831d8b73b99735fbd8294b24ee288964873e09458abaaf0126aceeffa5c19d&w=1380');
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display:none;
+}
+.landing .bcg3 {
+  background-image: url('https://img.freepik.com/photos-premium/illustration-realisee-par-mojograph_1176614-73632.jpg?w=1380');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 .landing .overlay{
   position: absolute;
@@ -185,6 +219,8 @@ line-height: 2;
   left: 50%;
   transform: translateX(-50%);
   gap: 10px;
+  padding: 0;
+  cursor: pointer;
 }
 .landing  .bullets-nav li{
   width: 15px;
@@ -266,6 +302,48 @@ text-align: center;
   line-height: 30px;
 }
 /* service section end */
+/* our design start */
+.our-design {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+background: linear-gradient(#00000073, #00000041),
+    url('https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.our-design .phone {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.our-design .phone img {
+width: 301px;
+padding-top: 150px;
+}
+
+
+.our-design .content {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  height: fit-content;
+  background-color: #8b8383;
+  padding: 20px;
+}
+.our-design .content h2{
+  font-weight:400 ;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.our-design .content span {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 2;
+}
+/* our design end */
+
 
 /* media query start */
 

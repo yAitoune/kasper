@@ -11,6 +11,9 @@ humbtn.onclick = function () {
 
 
 const bullets = document.querySelectorAll('.bullets-nav li');
+const landings = document.querySelectorAll(".landing div:nth-child(-n+3)")
+
+
 
 
 
@@ -18,11 +21,13 @@ const bullets = document.querySelectorAll('.bullets-nav li');
 for (let i = 0; i < bullets.length; i++) {
   bullets[i].onclick = function () {
   for (let j = 0; j < bullets.length; j++) {
-bullets[j].classList.remove('active')
+    bullets[j].classList.remove('active')
+    landings[j].style.display = 'none';
     
   }
-bullets[i].classList.add('active')
-  }
+    bullets[i].classList.add('active')
+    landings[i].style.display = 'block';
+  } 
   
 };
 
