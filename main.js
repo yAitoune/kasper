@@ -1,7 +1,5 @@
-let humbtn = document.querySelector(".toggle-menu");
-
-
-let mobinav = document.getElementById('nav')
+const humbtn = document.querySelector(".toggle-menu");
+const mobinav = document.getElementById('nav')
 
 
 
@@ -9,25 +7,24 @@ humbtn.onclick = function () {
   mobinav.classList.toggle("hum-show")
 }
 
-
 const bullets = document.querySelectorAll('.bullets-nav li');
 const landings = document.querySelectorAll(".bcg")
 
-
-
-
+function removeElementActive(element) {
+  for (let i = 0; i < element.length; i++) {
+    element[i].classList.remove("active")
+  }
+}
 for (let i = 0; i < bullets.length; i++) {
   bullets[i].onclick = function () {
-  for (let j = 0; j < bullets.length; j++) {
-    bullets[j].classList.remove('active')
-    landings[j].style.display = 'none';
-    
+    console.log(i); 
+    removeElementActive(bullets)
+    removeElementActive(landings)
+    this.classList.add("active")
+    landings[i].classList.add("active")
   }
-    bullets[i].classList.add('active')
-    landings[i].style.display = 'block';
-  } 
-  
-};
+}
+
 
 const nextButton = document.querySelector('.change-BG-right')
 const prevButton = document.querySelector('.change-BG-left')

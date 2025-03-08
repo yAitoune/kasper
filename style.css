@@ -1,7 +1,18 @@
 :root {
   --main-color: #19c8fa
 }
-
+@font-face {
+  font-family: 'CG Times Bold';
+  src: url('./webfonts/CG Times Bold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'CG Times';
+  src: url('./webfonts/Times CG.otf') format('opentype')
+}
+@font-face {
+  font-family: 'Novecento WideBold';
+  src: url('./webfonts/Novecento WideBold.ttf') format('truetype')
+}
 /* globalrules */
 
 * {
@@ -10,11 +21,14 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-
+html,body{
+  overflow-x: hidden;
+}
 body {
   font-family: "Work Sans", serif;
   font-optical-sizing: auto;
   font-style: normal;
+
 }
 
 .container {
@@ -207,11 +221,13 @@ header .container .form i {
 }
 
 .landing .header-text .content h1 {
-  font-weight: 400;
+
+    font-family: 'CG Times Bold';
   overflow: hidden;
 }
 
 .landing .header-text .content p {
+  font-family: 'CG Times';
   font-size: 14px;
   overflow: hidden;
   line-height: 2;
@@ -268,6 +284,7 @@ header .container .form i {
 }
 
 .main-heading h2 {
+  font-family: 'Novecento WideBold';
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 400;
@@ -485,7 +502,7 @@ header .container .form i {
   text-transform: uppercase;
   text-decoration: none;
 }
-
+/* portefolio end */
 /* video section start */
 .video{
     position: relative;
@@ -537,7 +554,8 @@ header .container .form i {
   margin-top: 20px;
   display: inline-block;
 }
-
+/* video section end */
+/* .about-us start */
 .about-us  .aboutUs{
   width: fit-content;
   margin: 10px auto ;
@@ -546,17 +564,54 @@ header .container .form i {
   width: 100%;
 }
 
-/* video section end */
+/* .about-us end */
 
+/* insight section start */
+.insight{
+  background: linear-gradient(#00000083, #00000083), url('https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/stats.png');
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  position: relative;
+  bottom: 130px;
+}
+.insight .container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-/* portefolio end */
+}
+.insight .container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0096c08a;
+  flex-basis: 25%;
+  height: 200px;
+  padding-top: 20px;
+
+}
+.insight .container div i{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.insight .container div span{
+  font-size: 40px;
+}
+
+/* insight section end */
+
 
 /* media query start */
 
 /* SMALL SCREEN */
 
 @media (max-width:48rem) {
-
+.container{
+  width: 100%;
+}
   /* nav start */
   header .container nav ul {
     display: none;
@@ -615,7 +670,20 @@ header .container .form i {
     grid-template-columns: 1fr;
   }
 
-  /* .portefolio end */
+/* insight section start */
+.insight{
+  padding: 50px 0;
+}
+.insight .container {
+flex-direction: column;
+align-items: center;
+
+}
+.insight .container div {
+min-width: 75%;
+
+}
+
 }
 
 
@@ -634,8 +702,10 @@ header .container .form i {
     display: none;
   }
 
-  /* nav end  */
-
+/* insight section start */
+     .insight .container div {
+       flex-basis: 50%;
+     }
 
 }
 
@@ -645,6 +715,10 @@ header .container .form i {
   .container {
     width: 60.625rem;
   }
+    /* insight section start */
+  .insight .container div {
+      flex-basis: 50%;
+    }
 
 }
 
@@ -660,5 +734,8 @@ header .container .form i {
     grid-template-columns: repeat(4,  1fr);
   }
 
-  /* .portefolio end */
+/* insight section start */
+    .insight .container div {
+    flex-basis: 25%;
+  }
 }
